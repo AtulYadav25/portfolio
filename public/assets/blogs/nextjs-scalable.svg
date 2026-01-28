@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect fill="#18181b" width="1600" height="900"/>
+  <rect fill="#27272a" x="200" y="150" width="1200" height="600" rx="20"/>
+  <rect fill="#3f3f46" x="240" y="190" width="500" height="60" rx="8"/>
+  <text x="490" y="230" fill="#fafafa" font-family="system-ui" font-size="24" font-weight="bold">Next.js Scalable Apps</text>
+  <rect fill="#52525b" x="240" y="280" width="700" height="15" rx="4"/>
+  <rect fill="#52525b" x="240" y="305" width="650" height="15" rx="4"/>
+  <rect fill="#52525b" x="240" y="330" width="720" height="15" rx="4"/>
+  <rect fill="#3f3f46" x="240" y="380" width="1120" height="200" rx="8"/>
+  <text x="280" y="420" fill="#a855f7" font-family="monospace" font-size="16">const</text>
+  <text x="340" y="420" fill="#fafafa" font-family="monospace" font-size="16">data = await fetchData();</text>
+  <rect fill="#3b82f6" x="240" y="620" width="120" height="40" rx="8"/>
+  <rect fill="#52525b" x="380" y="620" width="80" height="40" rx="8"/>
+  <text x="800" y="820" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="20">Building Scalable Web Apps with Next.js</text>
+</svg>

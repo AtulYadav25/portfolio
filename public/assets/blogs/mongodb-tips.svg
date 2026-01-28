@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect fill="#18181b" width="1600" height="900"/>
+  <rect fill="#27272a" x="200" y="150" width="1200" height="600" rx="20"/>
+  <circle fill="#00ed64" cx="400" cy="400" r="120"/>
+  <path fill="#001e2b" d="M340,360 L340,440 Q340,460 360,460 L400,460 L400,480 L360,480 Q320,480 320,440 L320,360 Q320,320 360,320 L400,320 L400,340 L360,340 Q340,340 340,360 Z"/>
+  <rect fill="#3f3f46" x="600" y="250" width="700" height="300" rx="8"/>
+  <rect fill="#52525b" x="620" y="280" width="400" height="20" rx="4"/>
+  <rect fill="#52525b" x="620" y="320" width="500" height="15" rx="4"/>
+  <rect fill="#52525b" x="620" y="345" width="450" height="15" rx="4"/>
+  <rect fill="#00ed64" x="620" y="400" width="200" height="80" rx="8"/>
+  <rect fill="#52525b" x="840" y="400" width="200" height="80" rx="8"/>
+  <text x="800" y="820" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="20">MongoDB Performance Optimization Tips</text>
+</svg>

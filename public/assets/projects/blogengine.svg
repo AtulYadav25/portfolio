@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect fill="#18181b" width="1600" height="900"/>
+  <rect fill="#27272a" x="100" y="100" width="600" height="400" rx="20"/>
+  <rect fill="#3f3f46" x="120" y="120" width="560" height="300" rx="8"/>
+  <rect fill="#52525b" x="140" y="140" width="200" height="20" rx="4"/>
+  <rect fill="#52525b" x="140" y="170" width="400" height="15" rx="4"/>
+  <rect fill="#52525b" x="140" y="195" width="350" height="15" rx="4"/>
+  <rect fill="#3b82f6" x="120" y="440" width="120" height="40" rx="8"/>
+  <rect fill="#27272a" x="900" y="100" width="600" height="400" rx="20"/>
+  <rect fill="#3f3f46" x="920" y="120" width="560" height="200" rx="8"/>
+  <rect fill="#52525b" x="920" y="340" width="300" height="20" rx="4"/>
+  <rect fill="#52525b" x="920" y="370" width="400" height="15" rx="4"/>
+  <text x="800" y="800" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="24">BlogEngine - Modern Blogging Platform</text>
+</svg>

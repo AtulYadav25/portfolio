@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect fill="#18181b" width="1600" height="900"/>
+  <rect fill="#27272a" x="200" y="150" width="1200" height="600" rx="20"/>
+  <rect fill="#3178c6" x="300" y="250" width="200" height="200" rx="16"/>
+  <text x="400" y="370" text-anchor="middle" fill="#fafafa" font-family="system-ui" font-size="72" font-weight="bold">TS</text>
+  <rect fill="#3f3f46" x="580" y="250" width="700" height="40" rx="8"/>
+  <rect fill="#52525b" x="580" y="310" width="600" height="15" rx="4"/>
+  <rect fill="#52525b" x="580" y="335" width="650" height="15" rx="4"/>
+  <rect fill="#52525b" x="580" y="360" width="550" height="15" rx="4"/>
+  <rect fill="#3f3f46" x="300" y="500" width="980" height="150" rx="8"/>
+  <text x="340" y="550" fill="#3178c6" font-family="monospace" font-size="18">interface</text>
+  <text x="450" y="550" fill="#fafafa" font-family="monospace" font-size="18">User { name: string; }</text>
+  <text x="800" y="820" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="20">TypeScript Best Practices for 2025</text>
+</svg>

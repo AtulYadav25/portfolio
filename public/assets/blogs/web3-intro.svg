@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect fill="#18181b" width="1600" height="900"/>
+  <rect fill="#27272a" x="200" y="150" width="1200" height="600" rx="20"/>
+  <circle fill="#6366f1" cx="500" cy="450" r="150" opacity="0.3"/>
+  <circle fill="#8b5cf6" cx="800" cy="450" r="180" opacity="0.3"/>
+  <circle fill="#a855f7" cx="1100" cy="450" r="150" opacity="0.3"/>
+  <path stroke="#22c55e" stroke-width="4" fill="none" d="M350,450 L650,450"/>
+  <path stroke="#22c55e" stroke-width="4" fill="none" d="M620,450 L980,450"/>
+  <path stroke="#22c55e" stroke-width="4" fill="none" d="M950,450 L1250,450"/>
+  <rect fill="#3f3f46" x="440" y="400" width="120" height="100" rx="8"/>
+  <rect fill="#3f3f46" x="740" y="380" width="120" height="140" rx="8"/>
+  <rect fill="#3f3f46" x="1040" y="400" width="120" height="100" rx="8"/>
+  <text x="800" y="820" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="20">Introduction to Web3 Development</text>
+</svg>
