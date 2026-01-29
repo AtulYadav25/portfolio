@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Atul Yadav Portfolio",
     images: [
       {
-        url: "./og-image.png",
+        url: "/og-image.png",
         width: 758,
         height: 758,
         alt: "Atul Yadav - Full Stack Web Developer",
@@ -48,12 +48,12 @@ export const metadata: Metadata = {
     title: "Atul Yadav | Full Stack Web Developer",
     description:
       "I build web applications using TypeScript, React, Next.js, MongoDB, and Web3.",
-    images: ["./og-image.png"],
+    images: ["/og-image.png"],
     creator: "@atulcode",
   },
 
   icons: {
-    icon: "./favicon2.ico",
+    icon: "/favicon.ico",
   },
 };
 
