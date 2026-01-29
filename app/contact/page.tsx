@@ -25,7 +25,7 @@ export default function ContactPage() {
                                 out!
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                 <Button asChild size="lg">
                                     <a
                                         href={calendlyUrl}
@@ -36,12 +36,11 @@ export default function ContactPage() {
                                         Book a Call
                                     </a>
                                 </Button>
-                                <Button asChild variant="outline" size="lg">
-                                    <a href={`mailto:${contactEmail}`}>
-                                        <PiEnvelope className="mr-2" />
-                                        Send Email
-                                    </a>
-                                </Button>
+                                or
+                                <a href={`mailto:${contactEmail}`} className="flex items-center">
+                                    <PiEnvelope className="mr-2" />
+                                    atul007414@gmail.com
+                                </a>
                             </div>
                         </div>
                     </section>

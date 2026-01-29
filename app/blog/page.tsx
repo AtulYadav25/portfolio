@@ -12,8 +12,8 @@ export default function BlogPage() {
     return (
         <>
             <Navbar />
-            <main className="main-content">
-                <div className="container">
+            <main className="pt-20 min-h-screen">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6">
                     <BlogPageContent />
                 </div>
             </main>

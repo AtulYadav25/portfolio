@@ -34,17 +34,15 @@ export const experiences: Experience[] = [
 
         ],
         responsibilities: [
-            "Built a full-stack Web3 arcade game called 'Chop-SUI Panda' with real-time gameplay audit and real-time leaderboard competition",
-            "Used Socket.IO to handle fast game updates, player actions, and basic security checks in real time gameplay",
-            "Created and deployed SUI Move smart contracts for game token purchases and in-game transactions.",
-            "Added wallet support using Mysten SUI Dapp Kit Packages, so players could connect, compete, and claim weekly rewards on the leaderboard",
-            "Developed & Integrated 3 Frontend Games (Fruit Ninja, Timber Man, Knife Hit) using Javascript Canvas, Phaser Js, and HTML5",
-            "Developed backend using Node.js, Express, MongoDB, and Redis for game sessions and leaderboard data",
-            "Set up weekly prize distribution with automatic leaderboard reset and reward handling for top players",
-            "Deployed the game on OVH Cloud VPS for stable hosting and easy updates",
-            "Added a CI/CD pipeline to push updates faster without downtime or manual server steps",
+            "Built a full-stack Web3 real-time application with live user interactions and competitive leaderboard mechanics",
+            "Implemented real-time state synchronization, event handling, and basic anti-cheat validation using Socket.IO",
+            "Designed, developed, and deployed SUI Move smart contracts to handle on-chain transactions and token-based actions",
+            "Integrated Sui wallet connectivity using Mysten SUI Dapp Kit, enabling users to authenticate, participate, and receive on-chain rewards",
+            "Developed multiple interactive frontend modules using JavaScript Canvas, Phaser.js, and HTML5",
+            "Built a scalable backend using Node.js, Express, MongoDB, and Redis to manage sessions, scoring data, and real-time updates",
+            "Deployed and maintained the application on an OVH Cloud VPS for reliability and performance",
+            "Set up CI/CD pipelines to enable fast, zero-downtime deployments and smoother release cycles"
         ]
-
 
     }
 ];

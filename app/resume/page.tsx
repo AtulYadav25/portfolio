@@ -23,8 +23,8 @@ export default function ResumePage() {
                             </Link>
                             <Button asChild variant="outline" size="sm">
                                 <a
-                                    href="/assets/resume.pdf"
-                                    download="Atul_Yadav_Resume.pdf"
+                                    href="/assets/ATUL_RESUME.pdf"
+                                    download="/assets/ATUL_RESUME.pdf"
                                 >
                                     <PiDownload className="mr-2" />
                                     Download PDF
@@ -45,8 +45,8 @@ export default function ResumePage() {
                                     </p>
                                     <Button asChild>
                                         <a
-                                            href="/assets/resume.pdf"
-                                            download="Atul_Yadav_Resume.pdf"
+                                            href="/assets/ATUL_RESUME.pdf"
+                                            download="/assets/ATUL_RESUME.pdf"
                                         >
                                             Download Resume
                                         </a>

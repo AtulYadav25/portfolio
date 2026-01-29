@@ -6,9 +6,33 @@ import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { TechChip } from "@/app/components/TechChip";
 import { projects } from "@/app/config/projectsConfig";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import ReactMarkdown from "react-markdown";
+import Image from "next/image";
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
+}
+
+// Function to get markdown content for a project
+async function getProjectContent(slug: string): Promise<string | null> {
+    const contentDir = path.join(process.cwd(), "content", "projects");
+    const filePath = path.join(contentDir, `${slug}.md`);
+
+    try {
+        if (fs.existsSync(filePath)) {
+            const fileContent = fs.readFileSync(filePath, "utf-8");
+            const { content } = matter(fileContent);
+            return content;
+        }
+    } catch (error) {
+        console.error(`Error reading markdown file for ${slug}:`, error);
+    }
+
+    return null;
 }
 
 export async function generateStaticParams() {
@@ -41,6 +65,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         notFound();
     }
 
+    // Get markdown content
+    const markdownContent = await getProjectContent(slug);
+
     return (
         <>
             <Navbar />
@@ -53,7 +80,14 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
                         <div className="mb-8">
                             <h1 className="text-2xl sm:text-3xl font-semibold text-white mb-4">{project.title}</h1>
-
+                            <AspectRatio ratio={16 / 9} className="bg-zinc-800 rounded-lg my-5">
+                                <Image
+                                    src={project.thumbnail}
+                                    alt={project.title}
+                                    fill
+                                    className="object-contain rounded-t-lg"
+                                />
+                            </AspectRatio>
                             <div className="flex items-center gap-4 mb-4">
                                 {project.liveUrl && (
                                     <a
@@ -88,30 +122,36 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                             </div>
                         </div>
 
-                        <div className="max-w-none prose-headings:text-white prose-headings:font-semibold prose-p:text-zinc-400 prose-a:text-white prose-a:underline prose-ul:text-zinc-400 prose-ol:text-zinc-400 prose-code:bg-zinc-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-800 prose-pre:rounded-lg">
-                            <p>{project.shortDescription}</p>
+                        <div className="markdown-content">
+                            {markdownContent ? (
+                                <ReactMarkdown>{markdownContent}</ReactMarkdown>
+                            ) : (
+                                <>
+                                    <p>{project.shortDescription}</p>
 
-                            <h2>Overview</h2>
-                            <p>
-                                This is a placeholder for the full project description. Replace
-                                this content by creating a markdown file at{" "}
-                                <code>/content/projects/{project.slug}.md</code> and parsing it
-                                here.
-                            </p>
+                                    <h2>Overview</h2>
+                                    <p>
+                                        This is a placeholder for the full project description. Replace
+                                        this content by creating a markdown file at{" "}
+                                        <code>/content/projects/{project.slug}.md</code> and parsing it
+                                        here.
+                                    </p>
 
-                            <h2>Features</h2>
-                            <ul>
-                                <li>Feature 1 - Add your project features here</li>
-                                <li>Feature 2 - Describe key functionality</li>
-                                <li>Feature 3 - Highlight technical achievements</li>
-                            </ul>
+                                    <h2>Features</h2>
+                                    <ul>
+                                        <li>Feature 1 - Add your project features here</li>
+                                        <li>Feature 2 - Describe key functionality</li>
+                                        <li>Feature 3 - Highlight technical achievements</li>
+                                    </ul>
 
-                            <h2>Technical Details</h2>
-                            <p>
-                                Add detailed technical information about the project, including
-                                architecture decisions, challenges faced, and solutions
-                                implemented.
-                            </p>
+                                    <h2>Technical Details</h2>
+                                    <p>
+                                        Add detailed technical information about the project, including
+                                        architecture decisions, challenges faced, and solutions
+                                        implemented.
+                                    </p>
+                                </>
+                            )}
                         </div>
                     </section>
                 </div>

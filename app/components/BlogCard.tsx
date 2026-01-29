@@ -34,9 +34,9 @@ export function BlogCard({ blog }: BlogCardProps) {
             </AspectRatio>
 
             <div className="p-4">
-                <h3 className="text-white font-medium mb-2 line-clamp-2">{blog.title}</h3>
+                <h3 className="text-white font-medium mb-2 ">{blog.title}</h3>
 
-                <p className="text-zinc-400 text-sm leading-relaxed mb-3 line-clamp-2">{blog.shortDescription}</p>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-3">{blog.shortDescription}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-3">
                     {blog.tags.map((tag) => (
@@ -51,9 +51,9 @@ export function BlogCard({ blog }: BlogCardProps) {
                     <span className="whitespace-nowrap">{blog.readTime}</span>
                 </div>
 
-                <Link href={`/blog/${blog.slug}`} className="text-zinc-400 hover:text-white text-sm flex items-center gap-1 transition-colors">
+                <a target="_blank" href={blog.url} className="text-zinc-400 hover:text-white text-sm flex items-center gap-1 transition-colors">
                     Read More <PiArrowRight className="inline-block ml-1" />
-                </Link>
+                </a>
             </div>
         </Card>
     );

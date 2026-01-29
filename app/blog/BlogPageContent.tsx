@@ -8,7 +8,7 @@ export function BlogPageContent() {
     return (
         <section className="projects-page">
             <RevealOnScroll>
-                <h1 className="projects-page-title">Blog</h1>
+                <h1 className="text-3xl font-bold mb-8">Blog</h1>
             </RevealOnScroll>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

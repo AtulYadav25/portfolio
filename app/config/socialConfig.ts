@@ -1,13 +1,13 @@
 export interface SocialLink {
     name: string;
     url: string;
-    icon: "linkedin" | "github" | "twitter";
+    icon: "linkedin" | "github" | "x" | "medium";
 }
 
 export const socialLinks: SocialLink[] = [
     {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/atulyadav25",
+        url: "www.linkedin.com/in/atulyadav25",
         icon: "linkedin",
     },
     {
@@ -16,11 +16,16 @@ export const socialLinks: SocialLink[] = [
         icon: "github",
     },
     {
-        name: "Twitter",
-        url: "https://twitter.com/atulyadav25",
-        icon: "twitter",
+        name: "Medium",
+        url: "https://medium.com/@atulprogrammer",
+        icon: "medium",
+    },
+    {
+        name: "X",
+        url: "https://x.com/atulcode",
+        icon: "x",
     },
 ];
 
 export const contactEmail = "atul007414@gmail.com";
-export const calendlyUrl = "https://calendly.com/atulyadav25";
+export const calendlyUrl = "https://cal.com/atulyadav/30min";
