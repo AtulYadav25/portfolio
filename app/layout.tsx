@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://atulyadav.vercel.com"),
-  title: "Atul Yadav | Full Stack Developer",
+  metadataBase: new URL("https://atulyadav.vercel.app"),
+  title: "Atul Yadav | Full Stack Web Developer",
   description:
     "I build web applications using TypeScript, React, Next.js and MongoDB. Full Stack Developer specializing in UI-focused products and Web3.",
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Atul Yadav | Full Stack Developer",
     description:
       "Full Stack Developer building modern UI-focused web applications using React, Next.js, TypeScript, and Web3.",
-    url: "https://atulyadav.vercel.com",
+    url: "https://atulyadav.vercel.app",
     siteName: "Atul Yadav Portfolio",
     images: [
       {
