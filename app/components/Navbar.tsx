@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const navLinks = [
@@ -10,11 +11,21 @@ const navLinks = [
 ];
 
 export function Navbar() {
+    const pathname = usePathname();
+    const router = useRouter();
+
     const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
         e.preventDefault();
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // If we're on the homepage, scroll to the section
+        if (pathname === "/") {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        } else {
+            // If we're on a different page, navigate to homepage with hash
+            router.push(`/#${sectionId}`);
         }
     };
 

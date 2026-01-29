@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { ScrollToHash } from "./components/ScrollToHash";
 import { IntroSection } from "./sections/IntroSection";
 import { ExperienceSection } from "./sections/ExperienceSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
@@ -11,6 +12,7 @@ import { CTASection } from "./sections/CTASection";
 export default function Home() {
   return (
     <>
+      <ScrollToHash />
       <Navbar />
       <main className="pt-20 min-h-screen">
         <div className="max-w-3xl mx-auto px-8 sm:px-6">

@@ -44,8 +44,8 @@ export const projects: Project[] = [
             { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original" },
             { name: "Vercel", iconClass: "devicon-vercel-original" },
         ],
-        liveUrl: "https://devflow.dev",
-        githubUrl: "https://github.com/AtulYadav25/devflow",
+        liveUrl: "https://sui-dao.vercel.app/",
+        githubUrl: "https://github.com/AtulYadav25/SUI-Move-DAO-Voting",
         featured: true,
     },
     {
@@ -61,8 +61,8 @@ export const projects: Project[] = [
             { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original" },
             { name: "Vercel", iconClass: "devicon-vercel-original" },
         ],
-        liveUrl: "https://devflow.dev",
-        githubUrl: "https://github.com/AtulYadav25/devflow",
+        liveUrl: "https://github.com/AtulYadav25/genesis-prompt",
+        githubUrl: "https://github.com/AtulYadav25/genesis-prompt",
         featured: true,
     },
 
