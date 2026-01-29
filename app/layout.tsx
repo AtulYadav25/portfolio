@@ -7,6 +7,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
   title: "Atul Yadav | Full Stack Developer",
   description:
@@ -25,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "I build web applications using TypeScript, React, Next.js and MongoDB.",
     type: "website",
+  },
+  icons: {
+    icon: "./favicon2.ico",
   },
 };
 
