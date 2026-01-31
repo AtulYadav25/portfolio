@@ -11,6 +11,17 @@ export interface Blog {
 
 export const blogs: Blog[] = [
     {
+        id: "blog-0",
+        title: "MoltBook AI Social Media — They chat about overthrowing HUMANS!",
+        shortDescription:
+            "AI is forming governments, communities, creating religions — and we (Humans) just watching. Most people don’t even know this exists yet. It kind of just happened.",
+        thumbnail: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*-gffpKj2qQV-S178JqMueg.png",
+        tags: ["AI", "Social Media", "MoltBook"],
+        date: "2026-01-31",
+        readTime: "4 min read",
+        url: "https://medium.com/@atulprogrammer/moltbook-ai-social-media-they-chat-about-overthrowing-humans-93d868637695"
+    },
+    {
         id: "blog-1",
         title: "Will Quantum Computers END Crypto?",
         shortDescription:
