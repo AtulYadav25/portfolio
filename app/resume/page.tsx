@@ -23,8 +23,8 @@ export default function ResumePage() {
                             </Link>
                             <Button asChild variant="outline" size="sm">
                                 <a
-                                    href="/assets/ATUL_RESUME.pdf"
-                                    download="/assets/ATUL_RESUME.pdf"
+                                    href="/assets/ATULKUMAR_RESUME.pdf"
+                                    download="/assets/ATULKUMAR_RESUME.pdf"
                                 >
                                     <PiDownload className="mr-2" />
                                     Download PDF
@@ -34,7 +34,7 @@ export default function ResumePage() {
 
                         <div className="bg-zinc-900/50 rounded-xl border border-zinc-800/50 overflow-hidden">
                             <iframe
-                                src="/assets/ATUL_RESUME.pdf"
+                                src="/assets/ATULKUMAR_RESUME.pdf"
                                 className="w-full h-[80vh]"
                                 title="Atul Yadav Resume"
                             />
@@ -45,8 +45,8 @@ export default function ResumePage() {
                                     </p>
                                     <Button asChild>
                                         <a
-                                            href="/assets/ATUL_RESUME.pdf"
-                                            download="/assets/ATUL_RESUME.pdf"
+                                            href="/assets/ATULKUMAR_RESUME.pdf"
+                                            download="/assets/ATULKUMAR_RESUME.pdf"
                                         >
                                             Download Resume
                                         </a>

@@ -25,7 +25,6 @@ export const projects: Project[] = [
             { name: "Fastify", iconClass: "devicon-fastify-plain" },
             { name: "MongoDB", iconClass: "devicon-mongodb-plain" },
             { name: "Node JS", iconClass: "devicon-nodejs-plain" },
-            { name: "Express JS", iconClass: "devicon-express-original" },
         ],
         liveUrl: "https://giftchain.fun",
         githubUrl: "https://github.com/AtulYadav25/giftchain",
