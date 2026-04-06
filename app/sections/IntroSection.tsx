@@ -33,7 +33,7 @@ export function IntroSection() {
                         <TechChip iconClass="devicon-nextjs-plain" name="Next.js" /> and&nbsp;
                         <TechChip iconClass="devicon-mongodb-plain" name="MongoDB" />.
                         <span>
-                            &nbsp;I&apos;m enthusiastic about UI-focused products, blockchain, web3, Full Stack Development and love learning new technologies.
+                            &nbsp;I aim to always contribute what matters and solve real problems. My Insterests are in Full Stack Development, blockchain, web3 and love learning new technologies.
                         </span>
                     </div>
 

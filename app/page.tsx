@@ -3,6 +3,7 @@ import { Footer } from "./components/Footer";
 import { ScrollToHash } from "./components/ScrollToHash";
 import { IntroSection } from "./sections/IntroSection";
 import { ExperienceSection } from "./sections/ExperienceSection";
+import { OpenSourceSection } from "./sections/OpenSourceSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { AboutSection } from "./sections/AboutSection";
 import { GitHubActivitySection } from "./sections/GitHubActivitySection";
@@ -18,6 +19,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-8 sm:px-6">
           <IntroSection />
           <ExperienceSection />
+          <OpenSourceSection />
           <ProjectsSection />
           <AboutSection />
           <GitHubActivitySection />

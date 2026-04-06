@@ -32,6 +32,26 @@ export const projects: Project[] = [
     },
     {
         id: "proj-2",
+        slug: "openbox",
+        title: "Open Box",
+        shortDescription:
+            "A web app to help developers discover open-source repos, analyze issues with AI, and start open source contribution faster",
+        thumbnail: "/assets/projects/openbox.png",
+        technologies: [
+            { name: "React", iconClass: "devicon-react-original" },
+            { name: "TypeScript", iconClass: "devicon-typescript-plain" },
+            { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original" },
+            { name: "Fastify", iconClass: "devicon-fastify-plain" },
+            { name: "MongoDB", iconClass: "devicon-mongodb-plain" },
+            { name: "Node JS", iconClass: "devicon-nodejs-plain" },
+            { name: "Gemini API", iconClass: "devicon-google-plain" },
+        ],
+        liveUrl: "https://github.com/AtulYadav25/openbox",
+        githubUrl: "https://github.com/AtulYadav25/openbox",
+        featured: true,
+    },
+    {
+        id: "proj-3",
         slug: "sui-dao-voting-app",
         title: "SUI DAO Voting App",
         shortDescription:
@@ -48,7 +68,7 @@ export const projects: Project[] = [
         featured: true,
     },
     {
-        id: "proj-3",
+        id: "proj-4",
         slug: "genesis-prompt",
         title: "Genesis Prompt",
         shortDescription:

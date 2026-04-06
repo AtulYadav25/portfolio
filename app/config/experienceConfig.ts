@@ -9,9 +9,43 @@ export interface Experience {
     locationType: string;
     technologies: { name: string; iconClass: string }[];
     responsibilities: string[];
+    links?: { name: string; url: string }[];
 }
 
 export const experiences: Experience[] = [
+    {
+        id: "exp-2",
+        company: "Modelence",
+        logo: "/assets/companies/modelence.svg",
+        role: "Modelence Builder",
+        startDate: "March 2026",
+        endDate: "Present",
+        location: "San Francisco, CA",
+        locationType: "Remote",
+        technologies: [
+            { name: "React", iconClass: "devicon-react-original" },
+            { name: "Typescript", iconClass: "devicon-typescript-plain" },
+            { name: "MongoDB", iconClass: "devicon-mongodb-plain" },
+            { name: "Node.js", iconClass: "devicon-nodejs-plain" },
+            { name: "Express", iconClass: "devicon-express-original" },
+        ],
+        responsibilities: [
+            "Contributed to Modelence Open Source core Authentication by shipping an enhancement PR for Google/GitHub OAuth + session layer",
+            "Updated Modelence Authentication to store and access user identity (avatar + name) across the application",
+            "Built Open Box using Modelence Framework — a web app helping developers discover open-source repos, analyze issues with AI, and start contributing faster",
+            "Open Box won 3rd place in Modelence Hackathon 2026"
+        ],
+        links: [
+            {
+                name: "Auth Merged PR",
+                url: "https://github.com/modelence/modelence/pull/184"
+            },
+            {
+                name: "Hackathon 2026 Win",
+                url: "https://modelence.com/hackathon"
+            }
+        ]
+    },
     {
         id: "exp-1",
         company: "Good Vibes ;)",
