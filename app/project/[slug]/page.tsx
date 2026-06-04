@@ -1,17 +1,16 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PiArrowLeft, PiGlobeSimple, PiGithubLogo } from "react-icons/pi";
-import { Navbar } from "@/app/components/Navbar";
-import { Footer } from "@/app/components/Footer";
-import { TechChip } from "@/app/components/TechChip";
+import { PiArrowLeftBold, PiGlobeSimpleBold, PiGithubLogoBold, PiArrowSquareOutBold } from "react-icons/pi";
+import { SideNav } from "@/app/components/SideNav";
+import { AnimatedBackground } from "@/app/components/AnimatedBackground";
+import { Footer } from "@/app/components/NewFooter";
 import { projects } from "@/app/config/projectsConfig";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -70,33 +69,55 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
     return (
         <>
-            <Navbar />
-            <main className="pt-20 min-h-screen">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6">
-                    <section className="py-12 sm:py-16">
-                        <Link href="/projects" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-6">
-                            <PiArrowLeft /> Back to Projects
+            <AnimatedBackground />
+            <SideNav />
+            <main className="relative z-10 min-h-screen pt-20 lg:pt-24 pb-12 px-6 lg:pl-28 lg:pr-20">
+                <div className="max-w-4xl mx-auto">
+                    <section className="py-8">
+                        {/* Back Link */}
+                        <Link 
+                            href="/projects" 
+                            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
+                        >
+                            <PiArrowLeftBold /> Back to Projects
                         </Link>
 
+                        {/* Project Header */}
                         <div className="mb-8">
-                            <h1 className="text-2xl sm:text-3xl font-semibold text-white mb-4">{project.title}</h1>
-                            <AspectRatio ratio={16 / 9} className="bg-zinc-800 rounded-lg my-5">
-                                <Image
-                                    src={project.thumbnail}
-                                    alt={project.title}
-                                    fill
-                                    className="object-contain rounded-t-lg"
-                                />
-                            </AspectRatio>
-                            <div className="flex items-center gap-4 mb-4">
+                            <span className="text-primary font-mono text-sm tracking-wider mb-4 block">PROJECT</span>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                                {project.title}
+                            </h1>
+                            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+                                {project.shortDescription}
+                            </p>
+                        </div>
+
+                        {/* Project Image */}
+                        <div className="relative aspect-video rounded-2xl overflow-hidden border border-border mb-8">
+                            <Image
+                                src={project.thumbnail}
+                                alt={project.title}
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+                        </div>
+
+                        {/* Project Links & Tech */}
+                        <div className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between p-6 rounded-2xl glass border border-border mb-8">
+                            {/* Links */}
+                            <div className="flex items-center gap-4">
                                 {project.liveUrl && (
                                     <a
                                         href={project.liveUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
+                                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                                     >
-                                        <PiGlobeSimple /> Live Site
+                                        <PiGlobeSimpleBold />
+                                        Live Demo
+                                        <PiArrowSquareOutBold />
                                     </a>
                                 )}
                                 {project.githubUrl && (
@@ -104,53 +125,71 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
+                                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-secondary text-foreground hover:bg-secondary/80 transition-colors"
                                     >
-                                        <PiGithubLogo /> GitHub
+                                        <PiGithubLogoBold />
+                                        Source Code
                                     </a>
                                 )}
                             </div>
 
+                            {/* Technologies */}
                             <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech) => (
-                                    <TechChip
+                                    <span
                                         key={tech.name}
-                                        iconClass={tech.iconClass}
-                                        name={tech.name}
-                                    />
+                                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-secondary text-sm text-muted-foreground border border-border"
+                                    >
+                                        <i className={`${tech.iconClass} text-base`} />
+                                        {tech.name}
+                                    </span>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="markdown-content">
+                        {/* Project Content */}
+                        <div className="prose prose-invert max-w-none">
                             {markdownContent ? (
-                                <ReactMarkdown>{markdownContent}</ReactMarkdown>
+                                <div className="markdown-content">
+                                    <ReactMarkdown>{markdownContent}</ReactMarkdown>
+                                </div>
                             ) : (
-                                <>
-                                    <p>{project.shortDescription}</p>
+                                <div className="space-y-8">
+                                    <div className="p-6 rounded-2xl border border-border bg-card">
+                                        <h2 className="text-xl font-semibold text-foreground mb-4">Overview</h2>
+                                        <p className="text-muted-foreground leading-relaxed">
+                                            {project.shortDescription}
+                                        </p>
+                                    </div>
 
-                                    <h2>Overview</h2>
-                                    <p>
-                                        This is a placeholder for the full project description. Replace
-                                        this content by creating a markdown file at{" "}
-                                        <code>/content/projects/{project.slug}.md</code> and parsing it
-                                        here.
-                                    </p>
+                                    <div className="p-6 rounded-2xl border border-border bg-card">
+                                        <h2 className="text-xl font-semibold text-foreground mb-4">Key Features</h2>
+                                        <ul className="space-y-3">
+                                            <li className="flex items-start gap-3 text-muted-foreground">
+                                                <span className="text-primary mt-1">-</span>
+                                                Modern, responsive user interface built with React
+                                            </li>
+                                            <li className="flex items-start gap-3 text-muted-foreground">
+                                                <span className="text-primary mt-1">-</span>
+                                                Full stack implementation with secure backend APIs
+                                            </li>
+                                            <li className="flex items-start gap-3 text-muted-foreground">
+                                                <span className="text-primary mt-1">-</span>
+                                                Optimized for performance and scalability
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                                    <h2>Features</h2>
-                                    <ul>
-                                        <li>Feature 1 - Add your project features here</li>
-                                        <li>Feature 2 - Describe key functionality</li>
-                                        <li>Feature 3 - Highlight technical achievements</li>
-                                    </ul>
-
-                                    <h2>Technical Details</h2>
-                                    <p>
-                                        Add detailed technical information about the project, including
-                                        architecture decisions, challenges faced, and solutions
-                                        implemented.
-                                    </p>
-                                </>
+                                    <div className="p-6 rounded-2xl border border-primary/20 bg-primary/5">
+                                        <p className="text-muted-foreground text-sm">
+                                            Want more details about this project? Check out the source code or 
+                                            <Link href="/contact" className="text-primary hover:underline ml-1">
+                                                get in touch
+                                            </Link>
+                                            {" "}for a detailed walkthrough.
+                                        </p>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     </section>

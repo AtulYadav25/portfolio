@@ -1,31 +1,25 @@
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
-import { ScrollToHash } from "./components/ScrollToHash";
-import { IntroSection } from "./sections/IntroSection";
-import { ExperienceSection } from "./sections/ExperienceSection";
-import { OpenSourceSection } from "./sections/OpenSourceSection";
-import { ProjectsSection } from "./sections/ProjectsSection";
-import { AboutSection } from "./sections/AboutSection";
-import { GitHubActivitySection } from "./sections/GitHubActivitySection";
-import { BlogSection } from "./sections/BlogSection";
-import { CTASection } from "./sections/CTASection";
+import { SideNav } from "./components/SideNav";
+import { AnimatedBackground } from "./components/AnimatedBackground";
+import { Footer } from "./components/NewFooter";
+import { HeroSection } from "./sections/HeroSection";
+import { AboutSection } from "./sections/NewAboutSection";
+import { ExperienceSection } from "./sections/NewExperienceSection";
+import { ProjectsSection } from "./sections/NewProjectsSection";
+import { BlogSection } from "./sections/NewBlogSection";
+import { ContactSection } from "./sections/ContactSection";
 
 export default function Home() {
   return (
     <>
-      <ScrollToHash />
-      <Navbar />
-      <main className="pt-20 min-h-screen">
-        <div className="max-w-3xl mx-auto px-8 sm:px-6">
-          <IntroSection />
-          <ExperienceSection />
-          <OpenSourceSection />
-          <ProjectsSection />
-          <AboutSection />
-          <GitHubActivitySection />
-          <BlogSection />
-          <CTASection />
-        </div>
+      <AnimatedBackground />
+      <SideNav />
+      <main className="relative z-10">
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <BlogSection />
+        <ContactSection />
       </main>
       <Footer />
     </>

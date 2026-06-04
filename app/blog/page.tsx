@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/app/components/Navbar";
-import { Footer } from "@/app/components/Footer";
+import { SideNav } from "@/app/components/SideNav";
+import { AnimatedBackground } from "@/app/components/AnimatedBackground";
+import { Footer } from "@/app/components/NewFooter";
 import { BlogPageContent } from "./BlogPageContent";
 
 export const metadata: Metadata = {
@@ -11,9 +12,10 @@ export const metadata: Metadata = {
 export default function BlogPage() {
     return (
         <>
-            <Navbar />
-            <main className="pt-20 min-h-screen">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <AnimatedBackground />
+            <SideNav />
+            <main className="relative z-10 min-h-screen pt-20 lg:pt-24 pb-12 px-6 lg:pl-28 lg:pr-20">
+                <div className="max-w-6xl mx-auto">
                     <BlogPageContent />
                 </div>
             </main>
