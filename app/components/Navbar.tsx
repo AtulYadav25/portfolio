@@ -30,8 +30,8 @@ export function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <nav className="fixed top-5 left-0 right-0 z-50 bg-zinc-950/60 backdrop-blur-sm border-b border-zinc-800/50">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between rounded-full  ">
                 <Link href="/" className="flex-shrink-0">
                     <Avatar className="w-10 h-10 border-2 border-zinc-700 rounded-lg">
                         <AvatarImage src="/assets/atul.png" alt="Atul Yadav" />

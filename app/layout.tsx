@@ -8,6 +8,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://atulyadav.vercel.app"),
   title: "Atul Yadav | Full Stack Web Developer",

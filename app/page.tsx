@@ -19,11 +19,11 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-8 sm:px-6">
           <IntroSection />
           <ExperienceSection />
+          <GitHubActivitySection />
           <OpenSourceSection />
           <ProjectsSection />
-          <AboutSection />
-          <GitHubActivitySection />
-          <BlogSection />
+          {/* <AboutSection /> */}
+          {/* <BlogSection /> */}
           <CTASection />
         </div>
       </main>

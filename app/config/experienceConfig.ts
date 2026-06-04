@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
         id: "exp-2",
         company: "Modelence",
         logo: "/assets/companies/modelence.svg",
-        role: "Modelence Builder - Part Time",
+        role: "Modelence Web Builder",
         startDate: "March 2026",
         endDate: "Present",
         location: "San Francisco, CA",
@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     },
     {
         id: "exp-1",
-        company: "Good Vibes ;)",
+        company: "Axes Labs One",
         logo: "/assets/companies/techcorp.png",
         role: "Freelance Full Stack Developer",
         startDate: "March 2025",

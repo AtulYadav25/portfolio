@@ -25,8 +25,8 @@ export function ExperienceSection() {
                                         </AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <h3 className={`text-white font-medium text-lg  filter blur-[5px] ${index === 0 ? "blur-none" : ""}`}>{exp.company}</h3>
-                                        <p className=" text-zinc-400 text-sm">{exp.role}</p>
+                                        <h3 className="text-white text-md">{exp.role}</h3>
+                                        <p className={`text-zinc-400 text-sm   ${index === 0 ? "blur-none" : ""}`}>{exp.company}</p>
                                     </div>
                                 </div>
 
