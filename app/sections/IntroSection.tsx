@@ -8,7 +8,6 @@ import { RevealOnScroll } from "../components/RevealOnScroll";
 import { TechChip } from "../components/TechChip";
 import { PiReadCvLogo } from "react-icons/pi";
 import { RiTelegram2Fill } from "react-icons/ri";
-import PixelBlast from "@/components/PixelBlast";
 
 const TECH_STACK = [
     { iconClass: "devicon-typescript-plain", name: "TypeScript" },
