@@ -7,7 +7,7 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
     {
         name: "LinkedIn",
-        url: "www.linkedin.com/in/atulyadav25",
+        url: "https://linkedin.com/in/atulyadav25",
         icon: "linkedin",
     },
     {
