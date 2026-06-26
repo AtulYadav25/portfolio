@@ -35,7 +35,7 @@ export function IntroSection() {
                     <div className="flex items-center gap-4 px-5 py-4">
                         <Avatar className="w-24 h-24 rounded-full border-2 border-zinc-700 flex-shrink-0">
                             <AvatarImage
-                                src="/assets/atul2.png"
+                                src="/assets/atul.png"
                                 className="object-contain"
                                 alt="Atul Yadav"
                             />
