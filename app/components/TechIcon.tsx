@@ -19,7 +19,7 @@ export function TechIcon({ iconClass, name, size = "md" }: TechIconProps) {
         md: "text-xl",
         lg: "text-2xl",
     };
-    const noColorIcons = new Set(["nextjs", "solidity", "fastify", "express", "socket", "vercel"]);
+    const noColorIcons = new Set(["nextjs", "solidity", "fastify", "express", "socket", "vercel", "apachekafka"]);
     const shouldColor = ![...noColorIcons].some(key => iconClass.includes(key));
 
     return (

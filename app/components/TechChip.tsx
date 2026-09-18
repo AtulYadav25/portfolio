@@ -15,7 +15,7 @@ interface TechChipProps {
 }
 
 export function TechChip({ iconClass, name, showName = true, variant = "normal" }: TechChipProps) {
-    const noColorIcons = new Set(["nextjs", "fastify", "express", "socket", "vercel"]);
+    const noColorIcons = new Set(["nextjs", "fastify", "express", "socket", "vercel", "apachekafka"]);
     const shouldColor = ![...noColorIcons].some(key => iconClass.includes(key));
 
     if (variant === "card") {

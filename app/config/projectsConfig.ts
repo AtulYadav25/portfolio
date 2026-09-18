@@ -12,6 +12,26 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: "proj-0",
+        slug: "piepack-exchange",
+        title: "PiePack Exchange",
+        shortDescription:
+            "PiePack Exchange is a paper-trading spot exchange built from scratch.",
+        thumbnail: "/assets/projects/piepack.png",
+        technologies: [
+            { name: "React", iconClass: "devicon-react-original" },
+            { name: "TypeScript", iconClass: "devicon-typescript-plain" },
+            { name: "Apache Kafka", iconClass: "devicon-apachekafka-original" },
+            { name: "Docker", iconClass: "devicon-docker-plain" },
+            { name: "Fastify", iconClass: "devicon-fastify-plain" },
+            { name: "PostgreSQL", iconClass: "devicon-postgresql-plain" },
+            { name: "Node JS", iconClass: "devicon-nodejs-plain" },
+            { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original" },
+        ],
+        githubUrl: "https://github.com/AtulYadav25/piepack-exchange",
+        featured: true,
+    },
+    {
         id: "proj-1",
         slug: "giftchain",
         title: "Giftchain Fun",
